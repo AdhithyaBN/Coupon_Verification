@@ -30,5 +30,7 @@ IF %ERRORLEVEL% NEQ 0 (
     exit /b 1
 )
 
+call venv\Scripts\deactivate
+
 REM Confirm setup completion
 echo "Setup complete. Virtual environment is activated and dependencies are installed."

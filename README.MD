@@ -18,6 +18,10 @@ Daily Cycle: Each day starts at 12:00 AM.
 Bookkeeping:
 The service tracks both weekly and daily limits for each user in addition to the global count for all users. This ensures accurate enforcement of limits and can be scaled based on more time-based limits if needed.
 
+Scalability:
+This service will not be scalable in terms of features without significant rework, like how many uses does a user have left for the day, or how many did the user use in the week.  
+But it provides an optimal solution that fits the bill.
+This service should be able to handle multiple users and coupons without any issues even in the long run.
 
 API Endpoints
 

@@ -73,5 +73,4 @@ def apply_coupon(coupon: Dict[str, Any], user_id: str) -> Dict[str, Any]:
         user_usage['user_day']['count'] -= 1
         
 
-    print(coupon) 
     return coupon  

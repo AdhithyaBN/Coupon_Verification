@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "7723c8e6-7f2b-44b9-81cd-f960ae8f1cc6",
+		"name": "Coupon API Test Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33834548"
+	},
+	"item": [
+		{
+			"name": "Apply Coupon for User (Daily Limit Test)",
+			"item": [
+				{
+					"name": "Apply Coupon Attempt 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"user_id\": \"user123\", \"coupon_code\": \"LIMITEDUSE\" }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/coupons/apply",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"coupons",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apply Coupon Attempt 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"user_id\": \"user123\", \"coupon_code\": \"LIMITEDUSE\" }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/coupons/apply",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"coupons",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apply Coupon Attempt 3 (Exceed Daily Limit)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"user_id\": \"user123\", \"coupon_code\": \"LIMITEDUSE\" }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/coupons/apply",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"coupons",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Apply Coupon for User (Weekly Limit Test)",
+			"item": [
+				{
+					"name": "Apply Coupon Attempt 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"user_id\": \"user123\", \"coupon_code\": \"LIMITEDUSE\" }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/coupons/apply",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"coupons",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apply Coupon Attempt 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"user_id\": \"user123\", \"coupon_code\": \"LIMITEDUSE\" }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/coupons/apply",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"coupons",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apply Coupon Attempt 6 (Exceed Weekly Limit)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"user_id\": \"user123\", \"coupon_code\": \"LIMITEDUSE\" }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/coupons/apply",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"coupons",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create Coupon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"coupon_code\": \"LIMITEDUSE\", \"global_total_repeat_count\": 20, \"user_total_repeat_count\": 10, \"user_weekly_repeat_count\": 5, \"user_daily_repeat_count\": 2 }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/coupons",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply Coupon for New User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"user_id\": \"user456\", \"coupon_code\": \"LIMITEDUSE\" }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/coupons/apply",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"coupons",
+						"apply"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
